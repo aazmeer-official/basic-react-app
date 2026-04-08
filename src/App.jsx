@@ -5,7 +5,7 @@ function App() {
   let name = "Aazmeer"
   return (
     <>
-    <ProductTab />
+    <ProductTab /> 
     </>
   ) 
 }
