@@ -1,18 +1,14 @@
-function Product({ title, features = [] }) {
 
-  const list = features.map((feature, index) => (
-    <li key={index}>{feature}</li>
-  ));
-let styles = {
-  backgroundColor: (title == "phone")?"yellow":"red"
-};
+import Price from "./Price";
+function Product({title,idx,description}) {
+  let oldPrice = [1,2,3,4]
+  let newPrice = [5,6,7,8]
   return (
-    <div style={styles}> 
-      <h3>{title}</h3>
-      <ul>{list}</ul>
- 
-      <h5>Product Description</h5>
-    </div>
+  <div>
+    <h1>{title}</h1>
+    <p>{description[idx]}</p>
+    <Price oldPrice={oldPrice[idx]} newPrice={newPrice[idx]}/>
+  </div>
   );
 }
 
